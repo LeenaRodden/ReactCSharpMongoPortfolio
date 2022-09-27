@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.5.26-alpha">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>774987e7-edcc-4647-930e-a9ebcb381911</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupCommand>set BROWSER=none&amp;&amp;npm start</StartupCommand>
+    <JavaScriptTestRoot>src\</JavaScriptTestRoot>
+    <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="public\data\" />
+    <Folder Include="public\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptConfiguration Remove="public\data\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="public\data\**" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    Portfolio API
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <h5>Test API</h5>
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Education", "Education", "API")</li>
+            <li>@Html.ActionLink("Experience", "Experience", "API")</li>
+            <li>@Html.ActionLink("Technology", "Technology", "API")</li>
+            <li>@Html.ActionLink("Website", "Website", "API")</li>
+            <li>@Html.ActionLink("ContactInfo", "ContactInfo", "API")</li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <h5>Edit Data</h5>
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Education", "Index", "Education")</li>
+            <li>@Html.ActionLink("Experience", "Index", "Experience")</li>
+            <li>@Html.ActionLink("Technology", "Index", "Technology")</li>
+            <li>@Html.ActionLink("Website", "Index", "Website")</li>
+            <li>@Html.ActionLink("ContactInfo", "Index", "ContactInfo")</li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <h5>Site Settings</h5>
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Manage Users", "Index", "User")</li>
+            <li>@Html.ActionLink("Settings", "Index", "Settings")</li>
+            <li>@Html.ActionLink("Export Data", "ExportData", "Settings")</li>
+        </ul>
+    </div>
+</div>
