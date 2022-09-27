@@ -1,0 +1,66 @@
+﻿@model API.Models.EducationModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Education</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EducationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EducationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GraduationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GraduationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DegreeText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DegreeText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.University)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.University)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {id = Model.EducationId}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

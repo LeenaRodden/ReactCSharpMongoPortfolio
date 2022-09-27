@@ -1,0 +1,60 @@
+﻿                html, body {
+                    color: white;
+                    background-color:#1b182a;
+                }
+
+                a{
+                    color: lightsteelblue;
+                }
+
+a:hover {
+    color: lightskyblue;
+}
+
+#root {
+    background-color: #1b182a;
+}
+
+                .privacyWarning{
+                    background-color:navy!important;
+                }
+
+#root > div > div.privacyWarning > input {
+    background-color: black !important;
+}
+
+#root > div > div.privacyWarning > p{
+    color:whitesmoke;
+}
+
+footer{
+    background-color:#111!important;
+    color: white;
+}
+
+.navbar-inverse {
+    background-image: -webkit-linear-gradient(top,#1b182a 0,#111 100%);
+    background-image: -o-linear-gradient(top,#1b182a 0,#111 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#1b182a),to(#111));
+    background-image: linear-gradient(to bottom,#1b182a 0,#111 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b182a', endColorstr='#111', GradientType=0);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    border-radius: 4px;
+}
+
+    .navbar-inverse .navbar-nav > li > a {
+        color:skyblue;
+    }
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: white !important;
+    }
+
+    .navbar-inverse .navbar-brand {
+        color: skyblue;
+    }
+
+    .navbar-inverse .navbar-brand:hover {
+        color: white !important;
+    }

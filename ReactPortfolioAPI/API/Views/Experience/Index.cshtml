@@ -1,0 +1,62 @@
+﻿@model IEnumerable<API.Models.ExperienceModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Experience</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ExperienceId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dates)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Company)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExperienceId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dates)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Company)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.ActionLink("↑", "MoveUp", new { id = item.ExperienceId }) |
+            @Html.ActionLink("↓", "MoveDown", new { id = item.ExperienceId }) |
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ExperienceId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ExperienceId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ExperienceId })
+        </td>
+    </tr>
+}
+
+</table>

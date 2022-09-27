@@ -1,0 +1,62 @@
+﻿@model IEnumerable<API.Models.ContactInfoModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Contact Info</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactInfoId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Details)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DisplayOnHome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order)
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactInfoId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Details)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DisplayOnHome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order)
+        </td>
+        <td>
+            @Html.ActionLink("↑", "MoveUp", new { id = item.ContactInfoId }) |
+            @Html.ActionLink("↓", "MoveDown", new { id = item.ContactInfoId }) |
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ContactInfoId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ContactInfoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ContactInfoId })
+        </td>
+    </tr>
+}
+
+</table>
